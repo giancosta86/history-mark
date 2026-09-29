@@ -54,8 +54,7 @@ class AboutPanel extends JPanel {
                         ),
                         ArtifactInfo.getName(),
                         ArtifactInfo.getVersion(),
-                        ArtifactInfo.getCopyrightHolder(),
-                        Optional.ofNullable(ArtifactInfo.getFacebookPage())
+                        ArtifactInfo.getCopyrightHolder()
                 );
 
 
