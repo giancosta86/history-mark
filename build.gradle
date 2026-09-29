@@ -1,37 +1,30 @@
 buildscript {
     repositories {
-        maven {
-            url 'https://dl.bintray.com/giancosta86/Hephaestus'
-        }
+        //TODO: del this!
+        mavenLocal()
 
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'info.gianlucacosta.moonlicense:moonlicense-gradle:5.0'
-        classpath 'info.gianlucacosta.moondeploy:moondeploy-gradle:3.4'
-        classpath 'info.gianlucacosta.aurora:aurora:9.2'
+        classpath 'info.gianlucacosta.aurora:aurora:10.0.0-SNAPSHOT'
     }
 }
 
 
 apply plugin: 'java'
 apply plugin: 'application'
-apply plugin: 'info.gianlucacosta.moonlicense'
-apply plugin: 'info.gianlucacosta.moondeploy'
 apply plugin: 'info.gianlucacosta.aurora'
 
 
 group 'info.gianlucacosta.historymark'
 archivesBaseName = 'historymark'
-version '1.1'
+version '2.0.0-SNAPSHOT'
 
 
 sourceCompatibility = 1.8
 
 description = 'Interactive Java app for historical events'
-
-project.ext.facebookPage = 'https://www.facebook.com/HistoryMark-122373171802409/'
 
 mainClassName = "info.gianlucacosta.historymark.App"
 
@@ -47,26 +40,10 @@ aurora {
 }
 
 
-
-moonLicense {
-    license = apache2
-
-    productInfo {
-        productName = 'HistoryMark'
-        inceptionYear = 2017
-        copyrightHolder = 'Gianluca Costa'
-    }
-
-    excludes = [
-            'WelcomeMessage\\.htm$'
-    ]
-}
-
-
 dependencies {
-    compile 'info.gianlucacosta.atlas:atlas:1.0'
-    compile 'info.gianlucacosta.zephyros:zephyros-core:1.1'
-    compile 'info.gianlucacosta.zephyros:zephyros-hibernate:1.0'
+    compile 'info.gianlucacosta.atlas:atlas:2.0.0-SNAPSHOT'
+    compile 'info.gianlucacosta.zephyros:zephyros-core:2.0.0-SNAPSHOT'
+    compile 'info.gianlucacosta.zephyros:zephyros-hibernate:2.0.0-SNAPSHOT'
 
     compile 'org.hsqldb:hsqldb:2.4.0'
     compile 'com.thoughtworks.xstream:xstream:1.4.10'
