@@ -42,7 +42,6 @@ aurora {
 
 dependencies {
     compile 'info.gianlucacosta.atlas:atlas:2.0.0-SNAPSHOT'
-    compile 'info.gianlucacosta.zephyros:zephyros-core:2.0.0-SNAPSHOT'
     compile 'info.gianlucacosta.zephyros:zephyros-hibernate:2.0.0-SNAPSHOT'
 
     compile 'org.hsqldb:hsqldb:2.4.0'
